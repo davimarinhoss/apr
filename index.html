@@ -39,10 +39,9 @@
         box-sizing: border-box;
       }
 
-      html,
-      body {
-        height: 100%;
-        overflow: hidden; /* Impede a rolagem da página */
+      /* --- AJUSTE PRINCIPAL --- */
+      html {
+        scroll-behavior: smooth;
       }
 
       body {
@@ -51,10 +50,13 @@
         color: var(--text-primary);
         display: flex;
         justify-content: center;
-        align-items: center; /* Centraliza o conteúdo na tela */
-        min-height: 100vh;
-        padding: 1rem;
+        align-items: center;
+        min-height: 100vh; /* Garante que o fundo ocupe toda a tela */
+        width: 100%;
+        overflow-x: hidden; /* Impede a rolagem horizontal */
+        padding: 2rem 1rem; /* Adiciona espaçamento vertical para respiro */
       }
+      /* --- FIM DO AJUSTE --- */
 
       .dashboard-container {
         width: 100%;
@@ -257,14 +259,8 @@
         border-left-color: var(--rank-bronze);
       }
 
-      .rank-4 .item-rank,
-      .rank-5 .item-rank {
-        background-color: var(--border-color);
-        color: var(--text-primary);
-      }
-      
-      /* Adicionando estilo para o sexto lugar para manter a consistência */
-      .rank-6 .item-rank {
+      /* Estilo Padrão para Posições Abaixo do Pódio */
+      .rank-default .item-rank {
         background-color: var(--border-color);
         color: var(--text-primary);
       }
@@ -291,7 +287,7 @@
         </div>
         <div class="summary-card">
           <div class="title">TOTAL ASSINADO (MÊS)</div>
-          <div class="value highlight">R$ 619.945,94</div>
+          <div class="value highlight">R$ 689.945,94</div>
         </div>
       </section>
 
@@ -328,8 +324,17 @@
                 <div class="amount">R$ 95.000,00</div>
               </div>
             </article>
-            <article class="item-card rank-4 highlight">
+            <article class="item-card rank-default">
               <div class="item-rank">4º</div>
+              <div class="item-info">
+                <div class="name">CWB Batel</div>
+              </div>
+              <div class="right-section">
+                <div class="amount">R$ 65.000,00</div>
+              </div>
+            </article>
+            <article class="item-card rank-default">
+              <div class="item-rank">5º</div>
               <div class="item-info">
                 <div class="name">Cacoal</div>
               </div>
@@ -337,22 +342,22 @@
                 <div class="amount">R$ 50.000,00</div>
               </div>
             </article>
-            <article class="item-card rank-5">
-              <div class="item-rank">5º</div>
+            <article class="item-card rank-default">
+              <div class="item-rank">6º</div>
+              <div class="item-info">
+                <div class="name">Natal</div>
+              </div>
+              <div class="right-section">
+                <div class="amount">R$ 35.000,00</div>
+              </div>
+            </article>
+            <article class="item-card rank-default">
+              <div class="item-rank">7º</div>
               <div class="item-info">
                 <div class="name">Goiânia</div>
               </div>
               <div class="right-section">
                 <div class="amount">R$ 33.435,00</div>
-              </div>
-            </article>
-            <article class="item-card rank-6">
-              <div class="item-rank">6º</div>
-              <div class="item-info">
-                <div class="name">CWB Batel</div>
-              </div>
-              <div class="right-section">
-                <div class="amount">R$ 30.000,00</div>
               </div>
             </article>
           </div>
